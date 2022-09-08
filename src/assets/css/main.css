@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,500&family=Inter:wght@100;200;300;400&family=Lato:wght@300;400&family=Manrope&family=Montserrat:wght@300;400;500&family=Open+Sans&family=Poppins:wght@200;400&family=Roboto:wght@300&family=Source+Sans+Pro:wght@200;300;400&display=swap");
+
+:root {
+  --app-body-font-family: "Open Sans", sans-serif;
+  --app-body-color: #111;
+  --app-body-bg: #f5f7fb;
+  --app-color-white: #fff;
+  --app-color-grey: #9599a8;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: var(--app-body-font-family);
+}
+
+body {
+  background-color: var(--app-body-bg);
+}
+
+.app__wrapper {
+  max-width: 94rem;
+  margin: 3rem auto;
+  padding: 1rem;
+}
+
+.container {
+  margin: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.w__30 {
+  width: 30%;
+}
+
+.w__40 {
+  width: 40%;
+}
+
+.none {
+  display: none;
+}
+
+.mt__1 {
+  margin-top: 1rem;
+}
+
+.mt__3 {
+  margin-top: 3rem;
+}
+
+.w__full {
+  width: 100% !important;
+}
+
+.relative {
+  position: relative;
+}
+
+.center {
+  text-align: center;
+}
+
+svg {
+  margin-right: 0.5rem;
+}
+
+.details {
+  max-width: 30rem;
+  margin: 5rem auto !important;
+  text-align: center;
+}
+
+.loader {
+  text-align: center;
+}
+
+.error {
+  text-align: center;
+  color: rgb(180, 29, 29);
+  margin-bottom: 1rem;
+}
+
+/* Button Component */
+.app__btn {
+  width: 10rem;
+  padding: 0.7rem;
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Card Component */
+.app__card {
+  width: inherit;
+  background: var(--app-color-white);
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 0.7rem;
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+.app__image__holder span {
+  font-size: 0.9rem;
+}
+
+.app__desc {
+  margin: 1rem 0 1rem 0;
+  font-size: 0.9rem;
+}
+
+.delete {
+  color: red;
+}
+
+.app__card img {
+  position: relative;
+  top: 10%;
+}
+
+.app__card span {
+  top: 32%;
+  position: relative;
+}
+
+.desc {
+  top: 0% !important;
+}
+
+.app__card b {
+  top: -12px;
+  left: 2rem;
+  position: relative;
+}
+
+/* Bottom */
+.app__bottom {
+  position: fixed;
+  text-align: center;
+  bottom: 0px;
+  max-width: 94rem;
+  width: 93%;
+  background: rgba(255, 255, 255, 0)
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.8) 80%
+    )
+    repeat scroll 0 0;
+  height: 150px;
+  z-index: 2;
+}
+
+.app__bottom button {
+  bottom: -55%;
+  position: relative;
+}
+
+.tabs span {
+  color: var(--app-color-grey);
+}
+
+/* Form */
+
+.app__form__control {
+  margin-bottom: 1rem;
+}
+
+.app__form__control label {
+  color: var(--app-color-grey);
+}
+
+.app__form__control input,
+select,
+textarea {
+  border: none;
+  background: #fff;
+  width: -webkit-fill-available;
+  padding: 0.7rem;
+  color: var(--app-color-grey);
+  border-radius: 0.4rem;
+  outline: none;
+  margin-top: 0.5rem;
+}
+
+/* Modal */
+
+.modal-backdrop {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+.modal {
+  background: #f5f7fb;
+  border-radius: 1rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 0.625rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  width: 20.5rem;
+  z-index: 10;
+}
+.modal-header {
+  font-size: 0.925rem;
+  font-weight: bold;
+  justify-content: space-between;
+  line-height: 150%;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  position: relative;
+}
+.modal-footer {
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+.modal-body {
+  margin-top: 1rem;
+  /* overflow-y: auto; */
+  margin-bottom: 1rem;
+  position: relative;
+}
+.modal-fade-enter,
+.modal-fade-leave-to {
+  opacity: 0;
+}
+.modal-fade-enter-active,
+.modal-fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+.close-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 2.5rem;
+  top: 1.6rem;
+  z-index: 1;
+}
+
+/* Media Screen */
+@media screen and (max-width: 30em) {
+  .modal {
+    border-radius: 1rem;
+    margin: auto;
+    position: absolute;
+    width: 90%;
+    height: 100% !important;
+  }
+  .modal-footer {
+    position: absolute;
+    bottom: 0px;
+    width: 78%;
+  }
+}
+@media (max-width: 62em) {
+  .modal {
+    height: inherit;
+  }
+}
+
+@media screen and (max-width: 844px) {
+  .tabs {
+    display: none !important;
+  }
+  .flex {
+    display: block;
+  }
+  .add__hero {
+    width: 100%;
+  }
+  .w__30,
+  .w__40 {
+    width: 100%;
+  }
+  .app__card b {
+    top: -27px;
+    left: 1rem;
+  }
+  .hero__type {
+    display: none;
+  }
+  .none {
+    display: block;
+    position: relative;
+    right: -66px;
+    width: 30px;
+    top: -24px;
+  }
+}
